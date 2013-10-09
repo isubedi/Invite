@@ -1,0 +1,23 @@
+<?php
+
+	function getEventById($id) {		
+		
+	}
+
+	function getEventByUserId($userId, $sort = "") {
+		
+	}
+	
+	function getEventByLocation($long, $lat, $radius) {
+		
+	}
+	
+	function getEventByDate($date) {
+		
+	}
+	
+	function getEventByType($type) {
+		
+	}
+
+?>

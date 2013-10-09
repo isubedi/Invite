@@ -1,0 +1,32 @@
+<?php
+
+	include_once("../../header.php");
+	include_once("../../core/api/location.php");	
+	include_once("../../widgets/eventWidget.php");
+
+	$currentPage = "Home";
+
+	getHeader($currentPage);
+	
+	$user = getUserFromId(getUserId());
+	
+?>
+
+<div id="container" data-role="content">
+<?php
+
+	$eventIds = getEventsByUser($user->getUserId());
+
+	foreach ($eventIds as $eventId) {
+		$event = getEventFromId($eventId['id']);
+
+		echo getEventWidget($event);
+	}
+	
+	
+?>
+</div>
+
+<?php
+	include_once("../../footer.php");
+?>

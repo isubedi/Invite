@@ -1,0 +1,25 @@
+<?php
+
+	include_once("../../header.php");
+	include_once("../../core/api/location.php");
+	include_once("../../widgets/eventWidget.php");
+	
+	$currentPage = "Invite Friends";
+	
+	getHeader($currentPage);
+	
+	$user = getUserFromId(getUserId());
+	$event = getEventFromId($_GET['id']);
+?>
+
+<div id="container">
+
+	<?php getEventWidget($event);?>
+
+</div>
+
+
+
+<?php
+	include_once("../../footer.php");
+?>

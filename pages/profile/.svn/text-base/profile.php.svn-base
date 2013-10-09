@@ -1,0 +1,24 @@
+<?php
+
+	include_once("../../header.php");
+	include_once("../../widgets/userWidget.php");
+
+	$currentPage = "Profile";
+	
+	getHeader($currentPage, "null", "edit profile");
+	
+	$user = getUserFromId(getUserId());
+	
+?>
+
+<div id="container" data-role="content">
+	<?php getUserWidget($user);?>
+	
+	<a href="<?php echo $WEB_ROOT.getPagePath("logout");?>" data-role="button">Logout</a>
+
+</div>
+
+
+<?php
+	include_once("../../footer.php");
+?>

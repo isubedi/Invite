@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/invite/!svn/ver/3/core/classes
+END
+user.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/invite/!svn/ver/3/core/classes/user.class.php
+END
+movie.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/invite/!svn/ver/1/core/classes/movie.class.php
+END
+event.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/invite/!svn/ver/3/core/classes/event.class.php
+END

@@ -1,0 +1,29 @@
+<?php
+
+	function getEventWidget($event) {
+		$toReturn = '
+					<div id="eventWidgetContainer">
+						<div id="topContainer">
+							<div class="date">
+								<p>'.getDayFromDateTime($event->getEventDate()).'<span>'.getMonthFromDateTime($event->getEventDate()).'</span></p>
+							</div>
+							
+							<div id="sideContainer">
+								<div class="name">
+								<a href="../../event/'.$event->getEventId().'">'.$event->getEventName().'</a>
+								</div>
+								<div class="description">
+									'.$event->getEventDescription().'
+								</div>
+								<div class="location">
+									'.getLocationFromId($event->getLocationId()).'
+								</div>
+							</div>
+						</div>
+					
+					</div>
+					';
+		echo $toReturn;
+	}	
+	
+?>

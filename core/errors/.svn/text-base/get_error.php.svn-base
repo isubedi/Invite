@@ -1,0 +1,72 @@
+<?php
+
+	include_once("error_list.php");
+	
+	// User Creation
+	function nenwUserIncompleteFields() {
+		$errorObj = new array();
+		$errorObj['id'] = "1000";
+		$errorObj['error_message'] = $err_1000;
+		return json_encode($errorObj);
+	}
+	
+	function nenwUserInvalidEmail() {
+		$errorObj = new array();
+		$errorObj['id'] = "1001";
+		$errorObj['error_message'] = $err_1001;
+		return json_encode($errorObj);
+	}
+
+	function newUserShortPassword() {
+		$errorObj = new array();
+		$errorObj['id'] = "1002";
+		$errorObj['error_message'] = $err_1002;
+		return json_encode($errorObj);
+	}
+
+	function newUserPreExistingEmail() {
+		$errorObj = new array();
+		$errorObj['id'] = "1003";
+		$errorObj['error_message'] = $err_1003;
+		return json_encode($errorObj);
+	}
+
+	// User Login
+	function loginEmailDoesNotExist() {
+		$errorObj = new array();
+		$errorObj['id'] = "1004";
+		$errorObj['error_message'] = $err_1004;
+		return json_encode($errorObj);
+	}
+
+	function loginInvalidPassword() {
+		$errorObj = new array();
+		$errorObj['id'] = "1005";
+		$errorObj['error_message'] = $err_1005;
+		return json_encode($errorObj);
+	}
+	
+	// User Update
+	function updateUserShortPassword() {
+		$errorObj = new array();
+		$errorObj['id'] = "1006";
+		$errorObj['error_message'] = $err_1006;
+		return json_encode($errorObj);
+	}
+
+	function updateUserInvalidUserName() {
+		$errorObj = new array();
+		$errorObj['id'] = "1007";
+		$errorObj['error_message'] = $err_1007;
+		return json_encode($errorObj);
+	}
+		
+	
+	function updateUserPreExistingUserName() {
+		$errorObj = new array();
+		$errorObj['id'] = "1007";
+		$errorObj['error_message'] = $err_1007;
+		return json_encode($errorObj);
+	}
+
+?>

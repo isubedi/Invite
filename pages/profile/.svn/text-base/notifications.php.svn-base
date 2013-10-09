@@ -1,0 +1,19 @@
+<?php
+
+	include_once("../../header.php");
+	$currentPage = "Notifications";
+
+	getHeader($currentPage);
+	
+	$user = getUserFromId(getUserId());
+
+	
+?>
+
+<div id="container" data-role="content">
+	Notifications
+</div>
+
+<?php
+	include_once("../../footer.php");
+?>

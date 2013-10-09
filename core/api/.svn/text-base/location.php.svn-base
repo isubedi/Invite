@@ -1,0 +1,10 @@
+<?php
+
+	function getLocationFromId($location) {
+		return "Ottawa";
+	}
+	
+	function getLocationId($location) {
+		return 1;
+	}
+?>

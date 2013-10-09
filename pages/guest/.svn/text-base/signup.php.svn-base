@@ -1,0 +1,33 @@
+<?php
+	include_once("../../header.php");
+	makeSureNotAuthenticated();
+?>
+<div data-role="page">
+	<div data-role="header">
+		<a href="<?php echo $WEB_ROOT;?>/login" data-icon="delete" data-transition="slide">Cancel</a>
+		<h1>Sign Up</h1>
+	</div>
+		
+	<div id="container" data-role="content">
+	
+		<div id="loginHeader">
+	
+		</div>
+		
+		<div id="loginForm">
+			<form method="post" action="<?php echo $WEB_ROOT;?>core/auth/docreateuser.php" data-transition="slide">
+					<?php 
+						if (!empty($_GET['id']))	{
+							echo getErrorMessage($_GET['id']);
+						}
+					?>
+				<input type="text" placeholder="username" id="username" name="username"/>
+				<input type="text" placeholder="email" id="email" name="email"/>
+				<input type="password" placeholder="password" id="password" name="password"/>
+				<input type="submit" value="Sign Up"/>
+			</form>
+		</div>
+	
+	</div>
+	
+</div>

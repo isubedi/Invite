@@ -1,0 +1,12 @@
+<?php
+
+	function getMonthFromDateTime($date) {
+		return date("M", strtotime($date));
+	}
+	
+	function getDayFromDateTime($date) {		
+		return date("j", strtotime($date));		
+	}
+
+?>
+

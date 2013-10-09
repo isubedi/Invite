@@ -1,0 +1,101 @@
+<?php
+
+class User {
+	
+	private $userId;
+	private $userName;
+	private $email;
+	private $name;
+	private $phone;
+	private $gender;
+	private $birthdate;
+	private $location;
+	private $profilePicture;
+	
+	function User($_userId, $_userName, $_name, $_location, $_profilePicture, $_email, $_phone, $_gender, $_birthdate) {
+		$this->userId = $_userId;
+		$this->userName = $_userName;
+		$this->name = $_name;
+		$this->location = $_location;
+		$this->profilePicture = $_profilePicture;
+		$this->email = $_email;
+		$this->phone = $_phone;
+		$this->gender = $_gender;
+		$this->birthdate = $_birthdate;
+	
+	}
+	
+	function getUserId() {
+		return $this->userId;
+	}
+
+	function getUserName() {
+		return $this->userName;
+	}
+
+	function getName() {
+		return $this->name;
+	}
+
+	function getLocation() {
+		return $this->location;
+	}
+	
+	function getProfilePicture() {
+		return $this->profilePicture;
+	}
+
+	function getEmail() {
+		return $this->email;
+	}
+
+	function getPhone() {
+		return $this->phone;
+	}
+	
+	function getGender() {
+		return $this->gender;
+	}
+		
+	function getBirthdate() {
+		return $this->birthdate;
+	}
+	
+	function setUserId($_userId) {
+		$this->userId = $_userId;
+	}
+
+	function setUserName($_userName) {
+		 $this->userName = $_userName;
+	}
+
+	function setName($_name) {
+		 $this->name = $_name;
+	}
+
+	function setLocation($_location) {
+		 $this->location = $_location;
+	}
+	
+	function setProfilePicture($_profilePicture) {
+		$this->profilePicture = $_profilePicture;
+	}
+
+	function setPhone($_phone) {
+		$this->phone = $_phone;
+	}
+	
+	function setGender($_gender) {
+		$this->gender = $_gender;
+	}
+		
+	function setBirthdate($_birthdate) {
+		$this->birthdate = $_birthdate;
+	}
+}
+
+
+
+
+
+?>

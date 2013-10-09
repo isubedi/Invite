@@ -1,0 +1,52 @@
+<?php
+
+	function getUserWidget($user) {
+	
+		if ($user->getUserId() == getUserId()) {
+			$actionContent = "Edit Profile";
+		} else {
+			$actionContent = "Follow";
+		}
+	
+		$toReturn = '
+					<div id="userWidgetContainer">
+						<div id="topContainer">
+							<div id="profilePictureContainer">
+								<img class="profilePicture" src="'.$user->getProfilePicture().'"/>
+							</div>
+							
+							<div id="statsContainer">
+								<div class="statsColumn">
+									<span class="number">'.getEventsHosted($user->getUserId()).'</span>
+									<span class="smallLabel">hosted</a>
+								</div>
+								<div class="statsColumn">
+									<span class="number">'.getFollowingCount($user->getUserId()).'</span>
+									<span class="smallLabel">attended</a>
+								</div>
+								<div class="statsColumn">
+									<span class="number">'.getFollowersCount($user->getUserId()).'</span>
+									<span class="smallLabel">followers</a>		
+								</div>
+							</div>
+							
+							<div id="actionContainer">'.
+								$actionContent
+							.'</div>
+						</div>
+						
+						<div id="bottomContainer">
+							<div class="name">
+								'.$user->getName().'
+							</div>
+							<div class="location">
+								'.$user->getLocation().'
+							</div>
+						</div>
+					
+					</div>
+					';
+		echo $toReturn;
+	}	
+	
+?>

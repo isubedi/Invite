@@ -1,0 +1,42 @@
+<?php 
+	include_once("../../includes/db.php");
+	include_once("../db_func/secure.php");
+	include_once("../api/location.php");
+	
+	makeSureAuthenticated();
+	
+	$name = clean($_POST['name']);
+	$description = clean($_POST['description']);
+	$location = clean($_POST['location']);
+	$loc_id = getLocationId($location);
+	$date = clean($_POST['date']);
+	$userId = getUserId();
+	$allowGuests = clean($_POST['allow_guests']);
+	$err_code = 0;
+		
+	if (empty($name)) {
+		$err_code = 1;
+	}
+	
+	if (empty($location)) {
+		$err_code = 1;
+	}
+	
+	if (empty($date)) {
+		$err_code = 1;	
+	}
+	
+	if ($err_code != 0) {
+		header( "Location: ".$WEB_ROOT."newevent/1");
+		exit;
+	}
+	
+	$date = str_replace("-", "/", $date);
+	mysql_query("INSERT into event (name, description, loc_id, event_date, host_id, allow_guests) values ('$name', '$description', '$loc_id', STR_TO_DATE('$date', '%Y/%m/%d'), '$userId', '$allowGuests')") or die(mysql_error());
+
+	$sql2 = mysql_query("SELECT id FROM event WHERE name = '".$name."' AND host_id = '".$userId."' order by id desc LIMIT 1"); 
+	$row2 = mysql_fetch_array($sql2);
+
+	header( "Location: ".$WEB_ROOT."invite/".$row2['id']) ;
+	exit;
+?>

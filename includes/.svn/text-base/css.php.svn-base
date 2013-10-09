@@ -1,0 +1,3 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT;?>styles/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $WEB_ROOT;?>styles/jquery.mobile.css" />
+<link href="<?php echo $WEB_ROOT;?>js/datepicker/css/mobiscroll-2.1-beta.custom.min.css" rel="stylesheet" type="text/css" />

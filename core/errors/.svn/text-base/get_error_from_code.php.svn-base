@@ -1,0 +1,36 @@
+<?php
+	function getErrorMessage($id) {
+		include_once("../../core/errors/error_list.php");
+
+		switch ($id) {
+			case 1000: return $err_1000;
+			break;
+
+			case 1001: return $err_1001;
+			break;
+
+			case 1002: return $err_1002;
+			break;
+
+			case 1003: return $err_1003;
+			break;
+
+			case 1004: return $err_1004;
+			break;
+
+			case 1005: return $err_1005;
+			break;
+
+			case 1006: return $err_1006;
+			break;
+
+			case 1007: return $err_1007;
+			break;
+			
+			case 1008: return $err_1008;
+			break;
+
+		}		
+	}
+	
+?>

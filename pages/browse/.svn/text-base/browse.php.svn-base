@@ -1,0 +1,20 @@
+<?php
+
+	include_once("../../header.php");
+	
+	$currentPage = "Browse";
+
+	getHeader($currentPage);
+	
+	$user = getUserFromId(getUserId());
+
+	
+?>
+
+<div id="container">
+	Browse
+</div>
+
+<?php
+	include_once("../../footer.php");
+?>

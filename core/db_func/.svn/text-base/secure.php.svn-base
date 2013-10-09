@@ -1,0 +1,14 @@
+<?php
+
+	function clean($input) {
+		//remove whitespace...
+		$input = trim($input);
+		//disable magic quotes...
+		$input = get_magic_quotes_gpc() ? stripslashes($input) : $input;
+		//prevent sql injection...
+		$input = is_numeric($input) ? intval($input) : mysql_real_escape_string($input);
+		//prevent xss...
+		$input = htmlspecialchars($input);
+		return $input;
+	}
+?>

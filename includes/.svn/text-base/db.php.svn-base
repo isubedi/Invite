@@ -1,0 +1,51 @@
+<?php
+	ini_set( "display_errors", 0);
+	session_start();
+
+	include_once("db.inc.php");
+	include_once("config.php");
+
+	mysql_connect($db_server,$db_user,$db_password);
+	mysql_select_db($database) or die('Error: ' . mysql_error());
+		
+	// Functions
+	function setSession($userId) {
+		$_SESSION['user'] = $userId;
+	}
+	
+	function getUserId() {
+		if (!empty($_SESSION['user']) && $_SESSION['user'] != null) {
+			return $_SESSION['user'];
+		}
+		return  -1;	
+
+	}
+	
+	function isLoggedIn() {
+		if (getUserId() != -1) {
+			return 1;
+		}
+		return 0;	
+	}
+	
+	function makeSureAuthenticated() {
+		global $WEB_ROOT;
+		global $PAGE_PATH;
+		
+		if (!isLoggedIn()) {
+			header("Location: ".$WEB_ROOT."login");
+			exit;
+		}	
+	}
+	
+	function makeSureNotAuthenticated() {
+		global $WEB_ROOT;
+		global $PAGE_PATH;
+
+		if (isLoggedIn()) {
+			header("Location: ".$WEB_ROOT."home");
+			exit;
+		}		
+	}
+	
+?>

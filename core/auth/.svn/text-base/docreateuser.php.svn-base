@@ -1,0 +1,26 @@
+<?php 
+	include_once("../../includes/db.php");
+	include_once("../db_func/secure.php");
+	include_once("auth_func.php");
+	
+	makeSureNotAuthenticated();
+	
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$username = $_POST['username'];
+	
+	$result = doRegister($username, $email, $password);
+	
+	if (substr($result, 0, 4) == "Err_")
+	{ 
+		header( "Location: ".$WEB_ROOT."/login/".substr($result, 4)) ;
+		exit;
+	}
+	else 
+	{ 	
+		setSession($result);
+		header( "Location: ".$WEB_ROOT."/home") ;
+		exit;		
+	} 
+	
+?>

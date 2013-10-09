@@ -1,0 +1,7 @@
+<?php
+	include_once("../../includes/db.php");
+
+	setSession(-1);
+	header( "Location: ".$WEB_ROOT."/home");
+	exit;
+?>

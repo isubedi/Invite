@@ -1,0 +1,9 @@
+<?php
+	// Get the requested event from the database and return as the Event class.
+
+	function parseEvent($id) {
+		
+	}
+
+
+?>

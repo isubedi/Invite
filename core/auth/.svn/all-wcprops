@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/invite/!svn/ver/8/core/auth
+END
+dologin.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/invite/!svn/ver/15/core/auth/dologin.php
+END
+dologout.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/invite/!svn/ver/15/core/auth/dologout.php
+END
+auth_func.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/invite/!svn/ver/16/core/auth/auth_func.php
+END
+doupdateuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/invite/!svn/ver/16/core/auth/doupdateuser.php
+END
+docreateuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/invite/!svn/ver/16/core/auth/docreateuser.php
+END

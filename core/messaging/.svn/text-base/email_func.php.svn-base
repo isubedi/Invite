@@ -1,0 +1,21 @@
+<?php
+
+
+function send_email($to, $subject, $message, $from, $category="not set") {	
+	$state = 'pending';
+	
+	if (!empty($to) and !empty($from) and !empty($subject) and !empty($message)) {
+		$query = "INSERT INTO email_queue(`to`,`from`,`subject`,`message`,`state`,`category`) VALUES ('$to','$from','$subject','$message','$state','$category')";
+			
+		$result = mysql_query($query) or die(mysql_error());
+		
+	} else {
+		//notify someone that function failed
+		$err_msg = "To: $to, Subject: $subject, Message: $message, From: $from";
+		$err_msg .= " One of these fields were null. db.php";
+		@mail('contact@'.$WEB_DOMAIN, 'Send Email function failed' ,$err_msg ,'From: <error@'.$WEB_DOMAIN.'>' ) ;
+	}
+}
+
+
+?>

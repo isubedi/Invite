@@ -1,0 +1,121 @@
+<?php
+
+class Event {
+	
+	private $eventName;
+	private $eventId;
+	private $creatorId;
+	private $eventType;
+	private $eventPrivacy;
+	private $allowGuests;
+	private $locationId;
+	private $creationDate;
+	private $eventDate;
+	private $eventPicture;
+	
+	function Event($_eventName, $_eventId, $_eventDescription, $_creatorId, $_eventType, $_eventPrivacy, $_allowGuests, $_locationId, $_creatonDate, $_eventDate, $_eventPicture) {
+		$this->eventName = $_eventName;
+		$this->eventId = $_eventId;
+		$this->eventDescription = $_eventDescription;		
+		$this->creatorId = $_creatorId;
+		$this->eventType = $_eventType;
+		$this->eventPrivacy = $_eventPrivacy;
+		$this->allowGuests = $_allowGuests;
+		$this->locationId = $_locationId;
+		$this->creationDate = $_creatonDate;
+		$this->eventDate = $_eventDate;
+		$this->eventPicture = $_eventPicture;
+	
+	}
+	
+	function getEventName() {
+		return $this->eventName;
+	}
+
+	function getEventDescription() {
+		return $this->eventDescription;
+	}
+	
+	function getEventId() {
+		return $this->eventId;
+	}
+
+	function getCreatorId() {
+		return $this->creatorId;
+	}
+
+	function getEventType() {
+		return $this->eventType;
+	}
+
+	function getEventPrivacy() {
+		return $this->eventPrivacy;
+	}
+
+	function getAllowGuests() {
+		return $this->allowGuests;
+	}
+
+	function getLocationId() {
+		return $this->locationId;
+	}
+	
+	function getCreationDate() {
+		return $this->creationDate;
+	}
+
+	function getEventDate() {
+		return $this->eventDate;
+	}
+	
+	function getEventPicture() {
+		return $this->eventPicture;
+	}
+	
+	function setEventName($__eventName) {
+		$this->eventName = $_eventName;
+	}
+
+	function setEventId($_eventId) {
+		 $this->eventId = $_eventId;
+	}
+
+	function setCreatorId($_creatorId) {
+		 $this->creatorId = $_creatorId;
+	}
+
+	function setEventType($_eventType) {
+		 $this->eventType = $_eventType;
+	}
+
+	function setEventPrivacy($_eventPrivacy) {
+		 $this->eventPrivacy = $_eventPrivacy;
+	}
+
+	function setAllowGuests($_allowGuests) {
+		 $this->allowGuests = $_allowGuests;
+	}
+
+	function setLocationId($_locationId) {
+		 $this->locationId = $_locationId;
+	}
+	
+	function setCreationDate($_creationDate) {
+		 $this->creationDate = $_creationDate;
+	}
+
+	function setEventDate($_eventDate) {
+		$this->eventDate = $_eventDate;
+	}
+	
+	function setEventPicture($_eventPicture) {
+		$this->eventPicture = $_eventPicture;
+	}
+		
+}
+
+
+
+
+
+?>

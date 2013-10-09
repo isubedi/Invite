@@ -1,0 +1,45 @@
+<?php
+
+	function getHeader($currentPage, $option1 = "null", $option2 = "null") {
+		$toReturn = '
+		<div data-role="page" data-title="'.$currentPage.'" data-theme="c">
+		<div data-role="header">';
+
+			if ($option1 != "null") {
+				$toReturn .= getButtonFromOption($option1);
+			}
+
+		$toReturn .= '<h1>'.$currentPage.'</h1>';
+			
+			if ($option2 != "null") {
+				$toReturn .= getButtonFromOption2($option2);
+			}
+			
+		$toReturn .= '</div>';
+		echo $toReturn;
+	}
+	
+	function getButtonFromOption($option) {
+		global $PAGE_PATH;
+		switch($option) {
+			case "cancelEditProfile":
+				$toReturn .= '<a href="'.$PAGE_PATH.getPagePath("profile").'" data-transition="slide" data-icon="delete" class="ui-btn-left">Cancel</a>';
+				break;
+		}
+		return $toReturn;		
+	}
+	
+	function getButtonFromOption2($option) {
+		global $PAGE_PATH;
+		switch($option) {
+			case "edit profile":
+				$toReturn .= '<a href="'.$PAGE_PATH.getPagePath("editprofile").'" data-transition="slide" data-icon="gear" class="ui-btn-right">Edit Profile</a>';
+				break;
+			case "cancel":
+				$toReturn .= '<a href="'.$_SERVER['HTTP_REFERER'].'" data-transition="slide" data-icon="cancel" class="ui-btn-right">Cancel</a>';
+				break;
+		}
+		return $toReturn;		
+	}
+	
+?>
