@@ -13,8 +13,9 @@ Stuff that works:
   Creating Events,
   Viewing Event Page,
   Editing Event,
+  View Profile,
+  Edit Profile
   
 To Do:
   Browse Events,
-  Notifications,
-  Profile Page,
+  Notifications
