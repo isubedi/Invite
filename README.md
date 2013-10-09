@@ -8,13 +8,13 @@ To set up, use the invite.sql file to set up the database. In the /includes/db.i
 your database settings.
 
 Stuff that works:
-  Login
-  Registration
-  Creating Events
-  Viewing Event Page
-  Editing Event
+  Login,
+  Registration,
+  Creating Events,
+  Viewing Event Page,
+  Editing Event,
   
 To Do:
-  Browse Events
-  Notifications
-  Profile Page
+  Browse Events,
+  Notifications,
+  Profile Page,
