@@ -1,8 +1,0 @@
-<?php
-
-	$db_server = "localhost";
-	$database = "invite";
-	$db_user = "root";
-	$db_password = "root";
-
-?>

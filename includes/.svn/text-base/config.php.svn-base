@@ -1,7 +1,0 @@
-<?php
-
-	//Server Info
-	$WEB_ROOT = "http://dev.nvite.com/";
-	$PAGE_PATH = $WEB_ROOT."pages/";
-
-?>
