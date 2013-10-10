@@ -19,3 +19,7 @@ Stuff that works:
 To Do:
   Browse Events,
   Notifications
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/isubedi/invite/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
